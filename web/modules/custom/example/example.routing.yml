@@ -1,0 +1,31 @@
+controller_one:
+  path: "/hello-velir-1"
+  defaults:
+    _controller: '\Drupal\example\Controller\ControllerOne::simpleText'
+    _title: "Controller one"
+  requirements:
+    _permission: "access content"
+
+controller_two:
+  path: "/hello-velir-2"
+  defaults:
+    _controller: '\Drupal\example\Controller\ControllerTwo::textInJson'
+    _title: "Controller two"
+  requirements:
+    _permission: "access content"
+
+controller_three:
+  path: "/hello-velir-3"
+  defaults:
+    _controller: '\Drupal\example\Controller\ControllerOne::simpleText'
+    _title: "Controller three"
+  requirements:
+    _role: "administrator"
+
+example.username_config:
+  path: "/admin/config/username-config"
+  defaults:
+    _form: 'Drupal\example\Form\UsernameCredConfigForm'
+    _title: "User First and Last names"
+  requirements:
+    _permission: "administer site configuration"

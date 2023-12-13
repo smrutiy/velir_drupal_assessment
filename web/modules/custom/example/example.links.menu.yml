@@ -1,0 +1,6 @@
+example.username_form:
+  title: "User's First and Last names"
+  route_name: example.username_config
+  description: "User credentials config form"
+  parent: system.admin_config_system
+  weight: 100

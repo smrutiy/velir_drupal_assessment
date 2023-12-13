@@ -1,0 +1,4 @@
+name: Example module
+type: module
+description: An example module to have user info
+core_version_requirement: ^10

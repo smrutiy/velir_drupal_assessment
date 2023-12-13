@@ -1,0 +1,16 @@
+services:
+  example.json_object:
+    class: Drupal\example\Controller\ControllerOne
+    arguments:
+      - "@entity_field.manager"
+
+  example.typed_data:
+    class: Drupal\\example\\Normalizer\\CustomTypedDataNormalizer
+
+  example.node_entity:
+    class: Drupal\example\Normalizer\NodeEntityNormalizer
+    arguments: ["@entity_type.manager"]
+
+  example.article_node_entity:
+    class: Drupal\example\Normalizer\ArticleNodeEntityNormalizer
+    arguments: ["@entity_type.manager"]
